@@ -74,7 +74,7 @@ copyRight = "Copyright (c) 2023 Szymon Bronisław Błaszczyński"
 alert = true
 alertDismissable = true
 # alertText = "Introducing the Doks child theme, several DX + UX updates, and more! <a class=\"alert-link stretched-link\" href=\"https://getdoks.org/blog/doks-v0.2/\" target=\"_blank\" rel=\"noopener\">Check out Doks v0.2</a>"
-alertText = "Introducing the nutek-cent, Nutek Terminal flavor that is aimed at learning the basics...<br /> <a class=\"alert-link stretched-link\" href=\"https://hub.docker.com/r/neosb/nutek-cent\">Check out Docker Hub</a>.<br/ > If you're an expert already, stay tuned for nutek-fedsec!"
+alertText = "Nutek Terminal's nutek-fedsec is available now for order!<br /> <a class=\"alert-link stretched-link\" href=\"https://hub.docker.com/r/neosb/nutek-fedsec\">Check out Docker Hub</a>.<br/ > Free of charge!"
 
 # Edit Page
 # repoHost [Github | Gitea | GitLab | Bitbucket | BitbucketServer ] is used for building the edit link based on git hoster
