@@ -13,7 +13,6 @@ Contact:
 
 * {{< email user="museyoucoulduse" domain="gmail.com" >}}
 * [@museyoucoulduse](https://twitter.com/museyoucoulduse)
-* irc.neosb.net
 * [Discord](https://discord.gg/eXK56QPgTe)
 
 Github:

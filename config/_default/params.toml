@@ -1,10 +1,10 @@
 # Meta Data for SEO
 
 ## Homepage
-title = "Nutek Terminal"
+title = "Nutek Security Solutions"
 titleSeparator = "-"
-titleAddition = "The only h@xor tool you will ever need"
-description = "Nutek Terminal is a system for building secure apps and assessing security of already working apps. Cybersecurity first class!"
+titleAddition = "Meet with flexibility of command line and gain true power, insight and save more time"
+description = "Nutek Security Platform is a system for building secure apps and assessing security of already working apps. Cybersecurity first class!"
 
 ## Documentation
 # docsVersion = "0.3"
@@ -13,7 +13,7 @@ description = "Nutek Terminal is a system for building secure apps and assessing
 images = ["doks.png"]
 ogLocale = "en_US"
 domainTLD = "nutek.neosb.net"
-titleHome = "Nutek Terminal"
+titleHome = "Nutek Security Solutions"
 
 ## Twitter Cards
 twitterSite = "@museyoucoulduse"
@@ -71,16 +71,16 @@ footer = "Phoenix Journey - H@cking 'round the cable. Future is her3 '' Watch it
 copyRight = "Copyright (c) 2023 Szymon Bronisław Błaszczyński"
 
 # Alert
-alert = true
+# alert = true
 alertDismissable = true
 # alertText = "Introducing the Doks child theme, several DX + UX updates, and more! <a class=\"alert-link stretched-link\" href=\"https://getdoks.org/blog/doks-v0.2/\" target=\"_blank\" rel=\"noopener\">Check out Doks v0.2</a>"
-alertText = "Nutek Terminal's nutek-fedsec is available now for order!<br /> <a class=\"alert-link stretched-link\" href=\"https://hub.docker.com/r/neosb/nutek-fedsec\">Check out Docker Hub</a>.<br/ > Free of charge!"
+# alertText = "Nutek Security Platform's nutek-fedsec is available now for order!<br /> <a class=\"alert-link stretched-link\" href=\"https://hub.docker.com/r/neosb/nutek-fedsec\">Check out Docker Hub</a>.<br/ > Free of charge!"
 
 # Edit Page
 # repoHost [Github | Gitea | GitLab | Bitbucket | BitbucketServer ] is used for building the edit link based on git hoster
 repoHost = "GitHub"
 #repoHost = "Gitea"
-docsRepo = "https://github.com/phoenix-journey/phoenix-journey.github.io"
+docsRepo = "https://github.com/nutek-terminal/nutek-terminal.github.io"
 docsRepoBranch = "master"
 docsRepoSubPath = ""
 editPage = false

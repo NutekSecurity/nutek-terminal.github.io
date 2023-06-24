@@ -4,7 +4,7 @@ description: "OpenSSL usage in C with ChatGPT help."
 lead: "OpenSSL usage in C with ChatGPT help."
 date: 2023-01-28T14:33:37+01:00
 lastmod: 2023-01-28T14:33:37+01:00
-draft: true
+draft: false
 images: []
 menu:
   docs:
@@ -526,7 +526,7 @@ void get_password(char *s) {
         // default
         s = "12345678123456781234567812345678";
         // uncomment to get input
-        // scanf("%s",s); /* Won't echo to screen while being typed */
+        // scanf("%s",s); // Won't echo to screen while being typed
         printf("%s", s);
         // make another input calls visible
         system("stty echo");
@@ -594,5 +594,4 @@ For in their unity, lies the strength of all human.
 
 ## Pull request welcomed
 
-Tell me what I did wrong, and how I can improve. This can be only `C`, or any other smart way to do this. **PLEASE HELP ME SOLVE THIS**👮🏿‍♀️
-[source code](https://github.com/phoenix-journey/phoenix-journey.github.io)
+Tell me what I did wrong, and how I can improve. This can be only `C`, or any other smart way to do this. **PLEASE HELP ME SOLVE THIS** 🧩 [source code](https://github.com/nutek-terminal/nutek-terminal.github.io)

@@ -1,7 +1,7 @@
 ---
 title: "Introduction"
-description: "Nutek Terminal is the only h@xor tool you will ever need."
-lead: "Nutek Terminal is the only h@xor tool you will ever need."
+description: "Nutek Security Platform is a set of tools curated by Nutek Security Solutions suitable for cybersecurity research, penetration testing and bug hunting."
+lead: "Nutek Security Platform is a set of tools curated by Nutek Security Solutions suitable for cybersecurity research, penetration testing and bug hunting."
 date: 2020-10-06T08:48:57+00:00
 lastmod: 2020-10-06T08:48:57+00:00
 draft: false
@@ -15,26 +15,15 @@ toc: true
 
 ## Get started
 
-There is a one way you can start right away with Nutek Terminal. Until there
-will be iso files available `Docker` is the primary way to use it.
-
-### Docker Hub page for the latest, __nutek-cent__ - _Nutek Terminal_ distribution
-
-{{< alert icon="👉" text="If you never used Docker ever before, try to head over to their documentation." />}}
-
-[Docker documentation](https://docs.docker.com/)
-
-The _fresh_ nutek-cent from hub.docker.com. [Here →](https://hub.docker.com/r/neosb/nutek-cent)
+Clone, copy or download zipped [Github repository](https://github.com/nutek-terminal/nutek-apple) and run `nutek-apple.rb` with `Ruby` or set executable permission and start right it away. The built in help will guide you.
 
 ### Quick Start
 
-{{< alert icon="👉" text="The Quick Start is intended for intermediate to advanced users." />}}
-
-One page summary of how to start a new Nutek Terminal container. [Quick Start →]({{< relref "quick-start" >}})
+One page summary of how to install all the tools and make them ready to use in an instant. [Quick Start →]({{< relref "quick-start" >}})
 
 ## Go further
 
-Tools and other things, you will be using during you hacker journey.
+Tools and other things, you will be using during you information security journey.
 
 ### Attack
 
@@ -44,7 +33,7 @@ during you bug bounties and ethical hacking. [Attack →]({{< relref "attack" >}
 ### Defend
 
 List of tools to use to defend yourself - if you find it
-to short, don't hesitate to create a pull request with new ones. [Defend →]({{< relref "defend" >}})
+to short, don't hesitate to create a pull request with new ones. (Currently not included) [Defend →]({{< relref "defend" >}})
 
 ### Knowledge
 
@@ -63,11 +52,97 @@ See what others have build with Doks. [Showcase →](https://getdoks.org/showcas
 
 ## Contributing
 
-If you want to contribute to any of the __Nutek Terminal__ projects
+If you want to contribute to any of the __Nutek Security Solutions__ projects
 head on to __GitHub__ and look for your choice in _nutek-terminal_
 organization, [Contributing →](https://github.com/nutek-terminal), or if
 you wish to extend this page, head over to [this repository](https://github.com/phoenix-journey/phoenix-journey.github.io).
 
+Also, if you're interested in obtaining source code for projects not listed on Github page, do not hesitate to [contact me]({{< relref "contact" >}})
+
 ## Help
 
-Get help on Nutek Terminal. [Help →]({{< relref "how-to-update" >}})
+## List of tools divided by category
+
+* Attack:
+  - bettercap
+  - ettercap
+  - hashcat
+  - hydra
+  - john-jumbo
+  - metasploit
+  - mitmproxy
+  - ncrack
+  - socat
+  - sqlmap
+  - xh
+* Code:
+  - adns
+  - bvi
+  - capstone
+  - cflow
+  - cppcheck
+  - fmt
+  - gitleaks
+  - grpc
+  - hyperscan
+  - jansson
+  - radare2
+  - rats
+  - zzuf
+* Knowledge:
+  - amass
+  - arp-scan
+  - bmon
+  - dnsx
+  - feroxbuster
+  - ffuf
+  - fping
+  - gau
+  - gobuster
+  - httpx
+  - httrack
+  - masscan
+  - mtr
+  - nethogs
+  - ngrep
+  - nikto
+  - nmap
+  - nuclei
+  - p0f
+  - rustscan
+  - smap
+  - tcpdump
+  - tcpflow
+  - termshark
+  - testssl
+  - zmap
+* Utility:
+  - argon2
+  - bat
+  - bottom
+  - discount
+  - dos2unix
+  - dust
+  - exa
+  - expect
+  - hexyl
+  - htmlq
+  - ipcalc
+  - irssi
+  - jq
+  - jql
+  - macchina
+  - mdcat
+  - monolith
+  - neovim
+  - openvpn
+  - ouch
+  - pandoc
+  - podman
+  - podman-compose
+  - ripgrep-all
+  - sd
+  - tmux
+  - viu
+  - w3m
+  - whatmask

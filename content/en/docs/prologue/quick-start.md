@@ -1,7 +1,7 @@
 ---
-title: "Quick Start"
-description: "One page summary of how to start a new Doks project."
-lead: "One page summary of how to start a new Doks project."
+title: "Quick Start for Nutek Security Platform"
+description: "Nutek is a set of tools that you can install automatically using Homebrew to save resources and gain an edge against your target."
+lead: "Nutek is a set of tools that you can install automatically using Homebrew to save resources and gain an edge against your target"
 date: 2020-11-16T13:59:39+01:00
 lastmod: 2020-11-16T13:59:39+01:00
 draft: false
@@ -15,88 +15,66 @@ toc: true
 
 ## Requirements
 
-* [Docker ![🐳](/images/whale.svg)](https://www.docker.com/) —
-the one and only original and the pioneer of the contenerization
-technology
+* [Homebrew 🍺](https://brew.sh) - package manager for macOS
 
-or
-
-* [Podman ![🦭](/images/seal.svg)](https://podman.io/) —
-viable alternative. Simply put: alias docker=podman.
-
-{{< details "Why containers?" >}}
-Nutek Terminal started as a spin-off of Kali Linux run in Docker
-[nutek-core]({{< relref "nutek-versions" >}}), after all I want to
-have my own __GNU/Linux__ distribution, or just a _Fedora_ spin.
+{{< details "Download size?" >}}
+Download size might be significant. Please be aware that on metered connections it might use the full bandwith and incure some additional costs.
 {{< /details >}}
 
-## Start a new Nutek Terminal container
+## Get your nutek-apple.rb copy
 
-It's really easy if you have _Docker_ already, it's just a matter
-of few `GiB`, currently `1.75 GB` for `nutek-cent`. I know you might have
-a 🐢 slow connection, but it's not that bad, you can download once and
-have as many containers as you wish. I will show you that in just a moment.
+You're really close to having the best there is in a fraction of a cent (don't forget to support the developers!)
 
-### Pull Nutek Terminal image from the registry
+Get your copy of `nutek-apple.rb`, in a way that suits you the most.
 
-First of all, you need to have an image. They are available on the [Docker Hub](https://hub.docker.com/u/neosb), and the ones you're looking for is:
+You can:
+* copy the content and paste it in your text editor
+* download just this file
+* zip and download the repository
+* clone the whole project (you will get updates on `git pull origin main` command)
 
-* `nutek-cent` - CentOS Stream 9 based image introduced recently, as a
-replacement to previous based on `Debian`. It has lot less tools and is
-much more slim than `nutek-core`. You might try it, if you're just strartig
-out and want to look how the things work.
+{{< alert icon="👉" text="Cloning easily enables you to update `nutek-apple.rb` when the new version will come out." />}}
 
-```bash
-docker pull neosb/nutek-cent
-# or
-podman pull neosb/nutek-cent
+## Chose your set of packages
+
+First run.
+
+```shell
+ruby nutek-apple.rb`
 ```
 
-* `nutek-core` - [description]({{< relref nutek-versions >}}#nutek-core)
+This will show the help message. From there you might already know what
+you want, but the most common option is to use
 
-```bash
-docker pull neosb/nutek-core
-# or
-podman pull neosb/nutek-core
+
+```shell
+ruby nutek-apple.rb -i --all --unattended
 ```
 
-### Create a new container
+After running this command, you won't be prompted for confirmation and
+all the default packages will be installed without any exception.
 
-The easiest way to start, but only to look around what's in there...
+Or if you wish to only get _knowledge_ (by what I mean reconnaisance) kind of apps
 
-```bash
-docker run -it neosb/nutek-cent
+```shell
+ruby nutek-apple.rb --install --knowledge
 ```
 
-This command will simply start a new `nutek-cent` container, but no ports
-and no folders will be attached to this container.
+This will show you the packages that will be installed and prompt you to
+chose if that's ok and then install all of them.
 
-To attach ports and add folder which you can access from container write
-this in your terminal:
+## That's it
 
-```bash
-# You can repeat -v and -p as many times you want
-docker run -it -h nutek-terminal -v /Users/maria/nutek:/root/nutek -p 8080:8080 neosb/nutek-cent
+There is nothing more to do next, maybe beside:
+
+```shell
+ruby nutek-apple.rb --safari
 ```
 
-* The `-h` argument changes the hostname of container to _nutek-terminal_
-* `-v` argument attaches the `/Users/maria/nutek` folder to container - __WARNIG!__ - you have to enable sharing certain folders in Docker app
-* Finnaly `-p` argument attaches port 8080 from host machine (you - the first part) to the 8080 port in the container.
+Which will bring up this website with tools panel opened to the left
+where you can find all of the apps that are included with brief
+explenation.
 
-### Attach to session
-
-```bash
-docker exec -it container_name /bin/zsh
-```
-
-### Start previosly stopped container
-
-```bash
-docker start -i container_name
-```
-
-### List all containers
-
-```bash
-docker ps -a
-```
+{{< details "Can't see?" >}}
+Simply click the TOOLS to the left, and the apps will roll...
+{{< /details >}}

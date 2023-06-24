@@ -16,7 +16,7 @@ toc: true
 
 ## Ground-up
 
-In [previous post]({{< ref "/docs/tools/python-neovim" >}})
+In [previous post]({{< ref "/docs/tutorial/python-neovim" >}})
 I tried to show you how to write simple program in _neovim_ and
 run using **python3**. Today I want to fill in the gaps in
 your knowledge of my understanding of how developer work. First

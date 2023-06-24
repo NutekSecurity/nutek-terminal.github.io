@@ -1,8 +1,8 @@
-# Nutek Terminal
+# Nutek Security Solutions
 
 [![GitHub Pages](https://github.com/nutek-terminal/nutek-terminal.github.io/actions/workflows/gh-pages.yml/badge.svg)](https://github.com/nutek-terminal/nutek-terminal.github.io/actions/workflows/gh-pages.yml)
 
-Nutek Terminal website made with help from Hugo and Doks
+Nutek Security Platform website made with help from Hugo and Doks
 
 Visit [>> here <<](https://nutek.neosb.net)
 ___
