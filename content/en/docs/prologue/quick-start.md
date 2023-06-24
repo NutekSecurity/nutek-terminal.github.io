@@ -28,6 +28,7 @@ You're really close to having the best there is in a fraction of a cent (don't f
 Get your copy of `nutek-apple.rb`, in a way that suits you the most.
 
 You can:
+
 * copy the content and paste it in your text editor
 * download just this file
 * zip and download the repository
@@ -45,7 +46,6 @@ ruby nutek-apple.rb`
 
 This will show the help message. From there you might already know what
 you want, but the most common option is to use
-
 
 ```shell
 ruby nutek-apple.rb -i --all --unattended

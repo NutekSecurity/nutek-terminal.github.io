@@ -14,7 +14,7 @@ pinned: false
 homepage: false
 ---
 
-# Why Mac?
+## Why Mac?
 
 I'm from Poland, I hope to have a decent life, but war is raging on the East,
 in Ukraine. Why would I talk about a gear worth thousands of dollars then?
@@ -25,7 +25,7 @@ kind of politician or businessman.
 
 The same goes for computers. You do not have a variety of choice, just some
 make and basically three kind of operating system - GNU/Linux, Windows and
-macOS. I'm a fan of Mac's but not a fan boy. I had once a Pro version of 
+macOS. I'm a fan of Mac's but not a fan boy. I had once a Pro version of
 MacBook, but that was a ripoff. Fan buzzing that loud that I could hear that
 in my microphone for vocals (yeah, I rap). Nevertheless, connectivity of it,
 was dead simple. Take any soundcard that's connecting through Thundrbolt

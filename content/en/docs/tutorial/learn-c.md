@@ -14,7 +14,7 @@ weight: 999
 toc: true
 ---
 
-# learn-c
+## learn-c
 
 ## My code while learning C and some data for you
 
@@ -26,19 +26,18 @@ Szymon Bronisław Błaszczyński © 2023 [museyoucoulduse@gmail.com](mailto:muse
 
 ___
 
-
 ## first-one
 
 ### Overview
 
 This program greets my cat in many colors. The trick used here is simple, you take number 31, which stands for
 red, and iterates until 37, meaning it will never hit 38, thus `i < 38`. All of this lays inside for loop
-with `man 3 printf` statements that clears color encoding with `\033[0m` and interpolates `i` variable as a 
+with `man 3 printf` statements that clears color encoding with `\033[0m` and interpolates `i` variable as a
 decimal - `%d`. At the end of each loop there is a `\n` character that mean to break a line and start over.
 
 Overall program1 will print 7 times this sentence in different color:
 
-```
+```text
 Cześć Nutek, mówi Szymon!
 ```
 
@@ -87,15 +86,15 @@ an error, and then I get someow related warning that my string interpolation is 
 #### Compilation
 
 You can compile your program with just invoking `clang input.c -o program`, but I have also made object file,
-with `clang -c program1.c`, that will be neccesairly later in debuging in __lldb__ (you can use _gdb_). I had 
-no idea how to do this, because all of my linking, object creating and compiling was with higher order 
-programming languages, so I relied on _Copilot_ code generation. It also made me a clean task for easier 
+with `clang -c program1.c`, that will be neccesairly later in debuging in __lldb__ (you can use _gdb_). I had
+no idea how to do this, because all of my linking, object creating and compiling was with higher order
+programming languages, so I relied on _Copilot_ code generation. It also made me a clean task for easier
 management.
 
 ## printf();
 
-In C programming language, the `printf()` function is used to output data to the console or terminal window. 
-It is a powerful function that can be used to format and print various types of data, including text, numbers, 
+In C programming language, the `printf()` function is used to output data to the console or terminal window.
+It is a powerful function that can be used to format and print various types of data, including text, numbers,
 and variables. Some of the things you can do with the `printf()` function include:
 
 1. Print text: You can use the `printf()` function to output any text that you want to the console. For example,
@@ -104,13 +103,13 @@ and variables. Some of the things you can do with the `printf()` function includ
 2. Print variables: You can use the `%d` format specifier to print integer variables, `%f` to print float variables,
 `%c` to print character variables, and `%s` to print string variables. For example, `int x = 10; printf("The value of x is %d", x);` will output "The value of x is 10" to the console.
 
-3. Format output: You can use a wide range of formatting options with the `printf()` function to control how 
-your output is displayed. For example, you can specify the width and precision of numbers, add leading zeros, 
+3. Format output: You can use a wide range of formatting options with the `printf()` function to control how
+your output is displayed. For example, you can specify the width and precision of numbers, add leading zeros,
 and control the alignment of your output.
 
 ### Precision of floating point number
 
-To display a floating point number with a precision of two decimal places using the `printf()` function in C, 
+To display a floating point number with a precision of two decimal places using the `printf()` function in C,
 you can use the `%0.2f` format specifier.
 
 ```c
@@ -127,7 +126,7 @@ This will display number `3.14`
 
 ### Leading zeros
 
-To display a number with six leading zeros in C, you can use the `%06d` format specifier with the `printf()` 
+To display a number with six leading zeros in C, you can use the `%06d` format specifier with the `printf()`
 function.
 
 ```c
@@ -146,7 +145,7 @@ This will display number 000042
 
 #### Integer
 
-To display an integer in hexadecimal format using the `printf()` function in C, you can use the `%x` format 
+To display an integer in hexadecimal format using the `printf()` function in C, you can use the `%x` format
 specifier.
 
 ```c
@@ -159,13 +158,13 @@ int main() {
 }
 ```
 
-In this example, the number variable is an integer type with the value of 255. The `printf()` function is used 
-to output the value of number in hexadecimal format using the format specifier `%x`. The output will be 
+In this example, the number variable is an integer type with the value of 255. The `printf()` function is used
+to output the value of number in hexadecimal format using the format specifier `%x`. The output will be
 "The number in hexadecimal format is: ff".
 
 ### Float
 
-Note that the `%x` format specifier only works with integers. If you want to display a floating point number 
+Note that the `%x` format specifier only works with integers. If you want to display a floating point number
 in hexadecimal format, you can use the `%a` format specifier instead. For example:
 
 ```c
@@ -179,12 +178,12 @@ int main() {
 ```
 
 In this example, the number variable is a floating point type with the value of _3.14159_. The `printf()`
-function is used to output the value of number in hexadecimal format using the `%a` format specifier. 
+function is used to output the value of number in hexadecimal format using the `%a` format specifier.
 The output will be "The number in hexadecimal format is: 0x1.921fap+1".
 
 ### String
 
-To display a string as a sequence of hexadecimal values using the `printf()` function in C, you can use the 
+To display a string as a sequence of hexadecimal values using the `printf()` function in C, you can use the
 `%x` or `%X` format specifier in combination with a loop that iterates through each character in the string.
 
 Here's an example code snippet that shows how to do this using the %x format specifier:
@@ -204,19 +203,19 @@ int main() {
 }
 ```
 
-In this example, the str variable is a string that contains the text "Hello, world!". The len variable is the 
-length of the string, which is obtained using the `strlen()` function. The for loop iterates through each 
-character in the string, and the `printf()` function is used to output the hexadecimal value of each character 
-using the `%x` format specifier. The output will be a sequence of hexadecimal values, one for each character 
+In this example, the str variable is a string that contains the text "Hello, world!". The len variable is the
+length of the string, which is obtained using the `strlen()` function. The for loop iterates through each
+character in the string, and the `printf()` function is used to output the hexadecimal value of each character
+using the `%x` format specifier. The output will be a sequence of hexadecimal values, one for each character
 in the string.
 
-Note that the `%x` format specifier displays the hexadecimal value of each character using lowercase letters 
+Note that the `%x` format specifier displays the hexadecimal value of each character using lowercase letters
 (a-f) for values greater than 9. If you want to use uppercase letters (A-F) instead, you can use the `%X` format
 specifier.
 
-3. ...continur on what `printf()` can do...
+- ...continur on what `printf()` can do...
 
-4. Print special characters: You can use special escape sequences to print characters such as tabs, newlines, 
+- Print special characters: You can use special escape sequences to print characters such as tabs, newlines,
 and quotes. For example, `printf("This is a tab:\tAnd this is a newline:\n");` will output "This is a tab: And
 this is a newline:" to the console.
 
@@ -231,16 +230,16 @@ int main() {
 }
 ```
 
-This program will ring a system bell if it can. Check it out! Here is some trivia: In this example, the `\a` 
-escape sequence is used to generate the ASCII bell character, which will cause the system to ring the bell. 
-The `printf()` function is used to output the bell character to the console. When you run this program, the 
+This program will ring a system bell if it can. Check it out! Here is some trivia: In this example, the `\a`
+escape sequence is used to generate the ASCII bell character, which will cause the system to ring the bell.
+The `printf()` function is used to output the bell character to the console. When you run this program, the
 system will ring the bell once.
 
-Note that the behavior of the `\a` escape sequence may vary depending on the system and terminal emulator 
-you are using. In some cases, it may not actually ring the system bell, but instead generate a visual or 
+Note that the behavior of the `\a` escape sequence may vary depending on the system and terminal emulator
+you are using. In some cases, it may not actually ring the system bell, but instead generate a visual or
 auditory signal in some other way.
 
-5. Use conditionals: You can use conditional statements within the printf() function to output different text
+- Use conditionals: You can use conditional statements within the printf() function to output different text
 based on the value of a variable. For example, `int x = 10; printf("x is %s", x > 5 ? "greater than 5" : "less than or equal to 5");` will output "x is greater than 5" to the console.
 
 These are just a few examples of what you can do with the printf() function in C programming language. It is a versatile and powerful function that you can use to output all kinds of data to the console.
@@ -299,12 +298,12 @@ In C programming language, there are different types of operators that can be us
 
 `? :` : Conditional operator (also known as ternary operator)
 
-These are some of the most commonly used operators in C. Understanding how to use these operators can help you 
+These are some of the most commonly used operators in C. Understanding how to use these operators can help you
 perform various operations on data in your C programs.
 
-### Pointers 
+### Pointers
 
-Pointers are used to store memory addresses of variables. To manipulate and access the data stored at those 
+Pointers are used to store memory addresses of variables. To manipulate and access the data stored at those
 memory locations, pointer operators are used. Here are some of the most commonly used pointer operators in C:
 
 `&` operator:
@@ -320,92 +319,92 @@ Example: `int x = 10; int* ptr = &x; int y = *ptr;` will assign the value of x (
 `++` and `--` operators:
 
 The `++` and `--` operators can be used to increment or decrement the memory address pointed to by a pointer.
-Example: `int arr[] = {1, 2, 3}; int* ptr = arr; ptr++;` will increment the pointer ptr to point to the next 
+Example: `int arr[] = {1, 2, 3}; int* ptr = arr; ptr++;` will increment the pointer ptr to point to the next
 element in the array.
 
 `->` operator:
 
 The `->` operator is used to access a member of a structure or union through a pointer.
-Example: `struct Point { int x, y; }; struct Point p = {1, 2}; struct Point* ptr = &p; int x = ptr->x;` 
+Example: `struct Point { int x, y; }; struct Point p = {1, 2}; struct Point* ptr = &p; int x = ptr->x;`
 will assign the value of p.x (which is 1) to the variable x.
 
 `[]` operator:
 
 The `[]` operator can be used to access elements of an array through a pointer.
-Example: `int arr[] = {1, 2, 3}; int* ptr = arr; int x = ptr[1];` will assign the value of arr[1] (which is 2) 
+Example: `int arr[] = {1, 2, 3}; int* ptr = arr; int x = ptr[1];` will assign the value of arr[1] (which is 2)
 to the variable x.
 
-These are some of the most commonly used pointer operators in C. Understanding how to use these operators can 
+These are some of the most commonly used pointer operators in C. Understanding how to use these operators can
 help you manipulate and access data stored in memory through pointers.
 
 ## C keywords
 
-* `auto`: This keyword is used to define local variables that are automatically initialized to garbage values.
+- `auto`: This keyword is used to define local variables that are automatically initialized to garbage values.
 
-* `break`: This keyword is used to exit a loop or switch statement early.
+- `break`: This keyword is used to exit a loop or switch statement early.
 
-* `case`: This keyword is used to define a case in a switch statement.
+- `case`: This keyword is used to define a case in a switch statement.
 
-* `char`: This keyword is used to define a character variable.
+- `char`: This keyword is used to define a character variable.
 
-* `const`: This keyword is used to define a variable as constant, i.e., its value cannot be changed.
+- `const`: This keyword is used to define a variable as constant, i.e., its value cannot be changed.
 
-* `continue`: This keyword is used to skip to the next iteration of a loop.
+- `continue`: This keyword is used to skip to the next iteration of a loop.
 
-* `default`: This keyword is used to define the default case in a switch statement.
+- `default`: This keyword is used to define the default case in a switch statement.
 
-* `do`: This keyword is used to define a do-while loop.
+- `do`: This keyword is used to define a do-while loop.
 
-* `double`: This keyword is used to define a double-precision floating-point variable.
+- `double`: This keyword is used to define a double-precision floating-point variable.
 
-* `else`: This keyword is used to define an alternative branch in an if statement.
+- `else`: This keyword is used to define an alternative branch in an if statement.
 
-* `enum`: This keyword is used to define an enumeration type.
+- `enum`: This keyword is used to define an enumeration type.
 
-* `extern`: This keyword is used to declare a variable or function that is defined in another file.
+- `extern`: This keyword is used to declare a variable or function that is defined in another file.
 
-* `float`: This keyword is used to define a single-precision floating-point variable.
+- `float`: This keyword is used to define a single-precision floating-point variable.
 
-* `for`: This keyword is used to define a for loop.
+- `for`: This keyword is used to define a for loop.
 
-* `goto`: This keyword is used to jump to a labeled statement.
+- `goto`: This keyword is used to jump to a labeled statement.
 
-* `if`: This keyword is used to define a conditional statement.
+- `if`: This keyword is used to define a conditional statement.
 
-* `int`: This keyword is used to define an integer variable.
+- `int`: This keyword is used to define an integer variable.
 
-* `long`: This keyword is used to define a long integer variable.
+- `long`: This keyword is used to define a long integer variable.
 
-* `register`: This keyword is used to define local variables that are stored in the CPU registers.
+- `register`: This keyword is used to define local variables that are stored in the CPU registers.
 
-* `return`: This keyword is used to return a value from a function.
+- `return`: This keyword is used to return a value from a function.
 
-* `short`: This keyword is used to define a short integer variable.
+- `short`: This keyword is used to define a short integer variable.
 
-* `signed`: This keyword is used to define a signed integer variable.
+- `signed`: This keyword is used to define a signed integer variable.
 
-* `sizeof`: This keyword is used to determine the size of a variable or data type.
+- `sizeof`: This keyword is used to determine the size of a variable or data type.
 
-* `static`: This keyword is used to define local variables that are only initialized once and retain 
+- `static`: This keyword is used to define local variables that are only initialized once and retain
 their values between function calls.
 
-* `struct`: This keyword is used to define a structure type.
+- `struct`: This keyword is used to define a structure type.
 
-* `switch`: This keyword is used to define a switch statement.
+- `switch`: This keyword is used to define a switch statement.
 
-* `typedef`: This keyword is used to define a new data type.
+- `typedef`: This keyword is used to define a new data type.
 
-* `union`: This keyword is used to define a union type.
+- `union`: This keyword is used to define a union type.
 
-* `unsigned`: This keyword is used to define an unsigned integer variable.
+- `unsigned`: This keyword is used to define an unsigned integer variable.
 
-* `void`: This keyword is used to define a function that does not return a value, or to define a pointer
+- `void`: This keyword is used to define a function that does not return a value, or to define a pointer
 to an unspecified data type.
 
-* `volatile`: This keyword is used to tell the compiler that a variable's value may change at any time,
+- `volatile`: This keyword is used to tell the compiler that a variable's value may change at any time,
 so it should not optimize out reads or writes to it.
 
-```
+```text
 auto     double   int      struct
 break    else     long     switch
 case     enum     register typedef
@@ -420,9 +419,9 @@ do       if       static   while
 
 ### if
 
-* `if`: The `if` statement is used for conditional execution of code. Here's an example:
+- `if`: The `if` statement is used for conditional execution of code. Here's an example:
 
-```
+```c
 int x = 5;
 if (x > 0) {
     printf("x is positive\n");
@@ -433,9 +432,9 @@ This code will print "x is positive" because the condition `x > 0` is true.
 
 ### switch
 
-* `switch`: The `switch` statement is used for multi-way branching. Here's an example:
+- `switch`: The `switch` statement is used for multi-way branching. Here's an example:
 
-```
+```c
 int day = 3;
 switch (day) {
     case 1:
@@ -457,9 +456,9 @@ This code will print "Wednesday" because the variable `day` is set to 3.
 
 ### while
 
-* `while`: The `while` statement is used for loop execution as long as a condition is true. Here's an example:
+- `while`: The `while` statement is used for loop execution as long as a condition is true. Here's an example:
 
-```
+```c
 int i = 0;
 while (i < 10) {
     printf("%d\n", i);
@@ -471,10 +470,10 @@ This code will print the numbers 0 through 9 because the condition `i < 10` is t
 
 ### do while
 
-* `do while`: The `do while` statement is used for loop execution at least once, and then repeatedly as
+- `do while`: The `do while` statement is used for loop execution at least once, and then repeatedly as
 long as a condition is true. Here's an example:
 
-```
+```c
 int i = 0;
 do {
     printf("%d\n", i);
@@ -482,14 +481,14 @@ do {
 } while (i < 10);
 ```
 
-This code will print the numbers 0 through 9 because the `do` block is executed at least once, and then 
+This code will print the numbers 0 through 9 because the `do` block is executed at least once, and then
 repeatedly as long as the condition `i < 10` is true.
 
 ### for
 
-* `for`: The `for` statement is used for loop execution with a fixed number of iterations. Here's an example:
+- `for`: The `for` statement is used for loop execution with a fixed number of iterations. Here's an example:
 
-```
+```c
 for (int i = 0; i < 10; i++) {
     printf("%d\n", i);
 }
@@ -500,9 +499,9 @@ starting at 0 and incrementing by 1 each time.
 
 ### goto
 
-* `goto`: The `goto` statement is used for unconditional branching to a labeled statement. Here's an example:
+- `goto`: The `goto` statement is used for unconditional branching to a labeled statement. Here's an example:
 
-```
+```c
 int i = 0;
 start:
 printf("%d\n", i);
@@ -512,15 +511,15 @@ if (i < 10) {
 }
 ```
 
-This code will print the numbers 0 through 9 because the `goto` statement jumps back to the `start` label as 
+This code will print the numbers 0 through 9 because the `goto` statement jumps back to the `start` label as
 long as the condition `i < 10` is true.
 
 ### function
 
-* Function: A function is a named block of code that can be called from other parts of the program. 
+- Function: A function is a named block of code that can be called from other parts of the program.
 Here's an example:
 
-```
+```c
 int add(int a, int b) {
     return a + b;
 }
@@ -529,26 +528,26 @@ int result = add(3, 4);
 printf("%d\n", result);
 ```
 
-This code defines a function called `add` that takes two integer arguments and returns their sum. 
+This code defines a function called `add` that takes two integer arguments and returns their sum.
 It then calls the `add` function with arguments 3 and 4 and prints the result, which is 7.
 
 ### typedef
 
-* Typedef: The `typedef` keyword is used to define a new type based on an existing type. Here's an example:
+- Typedef: The `typedef` keyword is used to define a new type based on an existing type. Here's an example:
 
-```
+```c
 typedef int myint;
 myint x = 5;
 ```
 
-This code defines a new type called `myint` that is an alias for the `int` type. It then declares a 
+This code defines a new type called `myint` that is an alias for the `int` type. It then declares a
 variable `x` of type myint and initializes it to 5.
 
 ### struct
 
-* Struct: A `struct` is a user-defined data type that groups together related data items. Here's an example:
+- Struct: A `struct` is a user-defined data type that groups together related data items. Here's an example:
 
-```
+```c
 struct Person {
     char name[50];
     int age;
@@ -565,10 +564,10 @@ for the age, and a floating-point number for the height. It then declares a vari
 
 ### typedef struct
 
-* Typedef struct: The `typedef struct` keyword combination is used to define a new type based on a `struct` 
+- Typedef struct: The `typedef struct` keyword combination is used to define a new type based on a `struct`
 type. Here's an example:
 
-```
+```c
 typedef struct {
     char title[50];
     int year;
@@ -578,16 +577,16 @@ Book book = {"The Catcher in the Rye", 1951};
 printf("%s was published in %d\n", book.title, book.year);
 ```
 
-This code defines a new type `Book` based on an anonymous `struct` that contains a character array for the 
-title and an integer for the year. It then declares a variable `book` of type `Book` and initializes its 
+This code defines a new type `Book` based on an anonymous `struct` that contains a character array for the
+title and an integer for the year. It then declares a variable `book` of type `Book` and initializes its
 fields with values. Finally, it prints out some information about the book.
 
 ### union
 
-* Union: A `union` is a user-defined data type that can hold data of different types in the same memory 
+- Union: A `union` is a user-defined data type that can hold data of different types in the same memory
 location. Here's an example:
 
-```
+```c
 union Data {
     int i;
     float f;
@@ -603,31 +602,31 @@ strcpy(data.str, "Hello");
 printf("data.str = %s\n", data.str);
 ```
 
-This code defines a `union` called `Data` that can hold an integer, a floating-point number, or a character 
-array. It then declares a variable `data` of type `Data` and initializes its integer field with a value. It 
-then sets the floating-point field and the character array field to other values and prints out some 
+This code defines a `union` called `Data` that can hold an integer, a floating-point number, or a character
+array. It then declares a variable `data` of type `Data` and initializes its integer field with a value. It
+then sets the floating-point field and the character array field to other values and prints out some
 information about `data`. Note that only one field of the `union` can be accessed at a time, and the other
 fields may contain garbage data.
 
 ### difference between union and struct
 
-In C, a `struct` is a user-defined data type that groups together related data items of different types. 
+In C, a `struct` is a user-defined data type that groups together related data items of different types.
 Each field within a `struct` has its own memory location, and all fields are allocated memory simultaneously.
 Each field can be accessed independently and manipulated as needed.
 
-On the other hand, a `union` is also a user-defined data type that can hold data of different types 
-in the same memory location. Unlike a `struct`, a `union` can only hold one value at a time, and all fields 
-share the same memory location. When a new value is assigned to a field of a `union`, the previous value 
+On the other hand, a `union` is also a user-defined data type that can hold data of different types
+in the same memory location. Unlike a `struct`, a `union` can only hold one value at a time, and all fields
+share the same memory location. When a new value is assigned to a field of a `union`, the previous value
 is overwritten. Accessing any field of the union returns the currently stored value, regardless of what type
 it is.
 
-The main difference between a `struct` and a `union` is how they use memory. A `struct` allocates memory 
+The main difference between a `struct` and a `union` is how they use memory. A `struct` allocates memory
 for all of its fields simultaneously, while a `union` allocates memory for only one of its fields at a time.
-This makes `unions` more space-efficient than `structs` in certain situations, but also less flexible, 
+This makes `unions` more space-efficient than `structs` in certain situations, but also less flexible,
 since only one field can be accessed at a time.
 
-Another important difference is that the size of a `struct` is the sum of the sizes of all its fields, 
-while the size of a `union` is the size of its largest field. This means that the memory allocation 
+Another important difference is that the size of a `struct` is the sum of the sizes of all its fields,
+while the size of a `union` is the size of its largest field. This means that the memory allocation
 of a `union` is based on its largest field, which may waste memory if the other fields are smaller.
 
 In summary, a `struct` is used to group related data items of different types together, while a `union`
@@ -636,53 +635,53 @@ have their own unique uses and advantages depending on the situation.
 
 ## Why learn C?
 
-Learning C language can be a great foundation for future development in other programming languages. 
-Here are some steps you can take to learn C language quickly, reliably, and with the best results for 
+Learning C language can be a great foundation for future development in other programming languages.
+Here are some steps you can take to learn C language quickly, reliably, and with the best results for
 future development:
 
-1. Start with the basics: Begin by understanding the fundamentals of programming such as data types, 
-variables, operators, loops, and functions. You can refer to a good C programming book or online tutorial 
+1. Start with the basics: Begin by understanding the fundamentals of programming such as data types,
+variables, operators, loops, and functions. You can refer to a good C programming book or online tutorial
 to understand these concepts.
 
-2. Practice coding: The best way to learn any programming language is by writing code. Try to solve small 
-problems using C language, and gradually move to more complex problems. You can find many online platforms 
+2. Practice coding: The best way to learn any programming language is by writing code. Try to solve small
+problems using C language, and gradually move to more complex problems. You can find many online platforms
 and coding challenges to practice your skills.
 
     - [Codewars.com](https://www.codewars.com/)
 
-3. Learn from other people's code: Look at other people's code and try to understand how they are solving 
-problems using C language. You can find open-source projects on GitHub or other platforms, read through 
+3. Learn from other people's code: Look at other people's code and try to understand how they are solving
+problems using C language. You can find open-source projects on GitHub or other platforms, read through
 the code and try to understand how it works.
 
     - [GitHub](https://github.com)
 
-4. Get familiar with tools and IDEs: Use an Integrated Development Environment (IDE) that supports C 
-programming. IDEs like CodeBlocks, Dev-C++, or Visual Studio Code can be helpful in writing and 
-debugging code. Also, get familiar with tools like GCC and Makefile, which can be useful in compiling 
+4. Get familiar with tools and IDEs: Use an Integrated Development Environment (IDE) that supports C
+programming. IDEs like CodeBlocks, Dev-C++, or Visual Studio Code can be helpful in writing and
+debugging code. Also, get familiar with tools like GCC and Makefile, which can be useful in compiling
 and building C code.
 
     - [Neovim](https://neovim.io/)
 
-5. Keep learning and updating yourself: C language is a foundational language for many other programming 
-languages, so it's important to keep learning and updating yourself with the latest developments in C 
-language. Join online forums and communities, participate in discussions, and read blogs and articles 
+5. Keep learning and updating yourself: C language is a foundational language for many other programming
+languages, so it's important to keep learning and updating yourself with the latest developments in C
+language. Join online forums and communities, participate in discussions, and read blogs and articles
 to stay updated.
 
-By following these steps, you can learn C language quickly, reliably, and with the best results for 
-future development in other programming languages. Remember that learning a programming language takes time, 
+By following these steps, you can learn C language quickly, reliably, and with the best results for
+future development in other programming languages. Remember that learning a programming language takes time,
 so be patient and keep practicing.
 
 ## Rule the World, but first, complete this function
 
 ### Get git
 
-No, seriously, get [git](https://git-scm.com/). Then head over to [Unity](https://github.com/ThrowTheSwitch/Unity) and 
-click on the **green** button. Copy the _https_ link, don't worry it's completely free, like with me. Open
+No, seriously, get [git](https://git-scm.com/). Then head over to [Unity](https://github.com/ThrowTheSwitch/Unity) and
+click on the __green__ button. Copy the _https_ link, don't worry it's completely free, like with me. Open
 Termian on your computer, it might be called Console or Powershell, it does not matter, you will be talking
 to the computer using commands, not being source of meta data - you just embark on your journey to become a
-**dev**, so act like one and create yourself a folder where your source code will live and then, write in 
-terminal `git clone https://github.com/ThrowTheSwitch/Unity`, press `<Enter>`, and that's it. You just 
-cloned your first open source project. This one is unit testing framework that will help us get to know 
+__dev__, so act like one and create yourself a folder where your source code will live and then, write in
+terminal `git clone https://github.com/ThrowTheSwitch/Unity`, press `<Enter>`, and that's it. You just
+cloned your first open source project. This one is unit testing framework that will help us get to know
 what's working in our programs and what's not. _Don't Reapeat Yourself_ and write down the exact flow of
 the commands and maybe some additional notes what happened, because it's important.
 
@@ -771,7 +770,7 @@ For the gradebook, you should be able to at least understand, if not write yours
 Find an averega of the 3 integer numbers (e.g. grades from the tests) and assign a final grade based on this
 conditions:
 
-```
+```c
 if the average is less than 60, return 'F'
 if the average is between 60 and 69, return 'D'
 if the average is between 70 and 79, return 'C'
@@ -853,73 +852,73 @@ TARGET = grasshoper-gradebook
 all: $(TARGET)
 
 $(TARGET): $(SRC) $(UNITY_SRC)
-	$(CC) $(CFLAGS) $^ -o $@
+ $(CC) $(CFLAGS) $^ -o $@
 
 clean:
-	rm -f $(TARGET)
-	rm -f *.o
+ rm -f $(TARGET)
+ rm -f *.o
 ```
 
 Here's an explanation of each part of the Makefile:
 
-* `CC = gcc`: This sets the variable CC to gcc, which specifies the C compiler to use for building the program.
+- `CC = gcc`: This sets the variable CC to gcc, which specifies the C compiler to use for building the program.
 
-* `CFLAGS = -std=c99 -Wall -Wextra -Werror -I../unity`: This sets the variable CFLAGS to a list of compiler 
-flags that will be used when compiling the program. `-std=c99` specifies that the C99 standard should be used, 
+- `CFLAGS = -std=c99 -Wall -Wextra -Werror -I../unity`: This sets the variable CFLAGS to a list of compiler
+flags that will be used when compiling the program. `-std=c99` specifies that the C99 standard should be used,
 
-* `-Wall -Wextra -Werror` enable warnings and treat them as errors, and `-I../unity` specifies that the 
+- `-Wall -Wextra -Werror` enable warnings and treat them as errors, and `-I../unity` specifies that the
 compiler should look in the `../unity` directory for header files.
 
-* `SRC = grasshoper-gradebook.c`: This sets the variable `SRC` to the name of the C source file for the program.
+- `SRC = grasshoper-gradebook.c`: This sets the variable `SRC` to the name of the C source file for the program.
 
-* `UNITY_SRC = ../unity/unity.c`: This sets the variable `UNITY_SRC` to the name of the Unity source file that 
+- `UNITY_SRC = ../unity/unity.c`: This sets the variable `UNITY_SRC` to the name of the Unity source file that
 will be used for testing.
 
-* `TARGET = grasshoper-gradebook`: This sets the variable `TARGET` to the name of the executable file that 
+- `TARGET = grasshoper-gradebook`: This sets the variable `TARGET` to the name of the executable file that
 will be created.
 
-* `.PHONY: all clean`: This declares the all and clean targets as phony, meaning that they don't correspond 
+- `.PHONY: all clean`: This declares the all and clean targets as phony, meaning that they don't correspond
 to actual files and should always be considered out of date.
 
-* `all: $(TARGET)`: This declares the all target, which depends on the `$(TARGET)` file. When make `all` is run, 
+- `all: $(TARGET)`: This declares the all target, which depends on the `$(TARGET)` file. When make `all` is run,
 it will build the `$(TARGET)` file.
 
-* `$(TARGET): $(SRC) $(UNITY_SRC)`: This specifies that the `$(TARGET)` file depends on the `$(SRC)` and 
+- `$(TARGET): $(SRC) $(UNITY_SRC)`: This specifies that the `$(TARGET)` file depends on the `$(SRC)` and
 
-* `$(UNITY_SRC)` files. When make is run and `$(TARGET)` is out of date, it will rebuild the file by 
+- `$(UNITY_SRC)` files. When make is run and `$(TARGET)` is out of date, it will rebuild the file by
 compiling `$(SRC)` and `$(UNITY_SRC)` together.
 
-* `$(CC) $(CFLAGS) $^ -o $@`: This is the command that is run to build the `$(TARGET)` file. `$(CC)` and 
+- `$(CC) $(CFLAGS) $^ -o $@`: This is the command that is run to build the `$(TARGET)` file. `$(CC)` and
 
-* `$(CFLAGS)` specify the compiler and its flags, `$^` expands to the list of dependencies (`$(SRC)` and 
+- `$(CFLAGS)` specify the compiler and its flags, `$^` expands to the list of dependencies (`$(SRC)` and
 
-* `$(UNITY_SRC)`), and `$@` expands to the target name (`$(TARGET)`).
+- `$(UNITY_SRC)`), and `$@` expands to the target name (`$(TARGET)`).
 
-* `clean: rm -f $(TARGET)`: This declares the clean target, which removes the `$(TARGET)` file when run.
+- `clean: rm -f $(TARGET)`: This declares the clean target, which removes the `$(TARGET)` file when run.
 
 ## Dockerfile
 
-Docker is a popular open-source platform for building, shipping, and running distributed applications. 
+Docker is a popular open-source platform for building, shipping, and running distributed applications.
 It allows developers to package applications and their dependencies into a portable container that can
 run on any machine, regardless of the underlying operating system and hardware.
 
 Here are a few common use cases for Docker:
 
 1. Application deployment: Docker simplifies the deployment process by allowing developers to package their
-applications and their dependencies into a single container. This container can then be easily deployed 
+applications and their dependencies into a single container. This container can then be easily deployed
 to any environment, whether it's a development machine, staging environment, or production server.
 
 2. Microservices architecture: Docker's lightweight containers make it easier to break down monolithic
-applications into smaller, independently deployable microservices. Each microservice can be packaged 
+applications into smaller, independently deployable microservices. Each microservice can be packaged
 and deployed as a separate container, allowing for greater flexibility and scalability.
 
-3. Continuous integration and deployment (CI/CD): Docker can be used in a CI/CD pipeline to automate 
-the build, test, and deployment process. Developers can create a Docker image of their application, 
+3. Continuous integration and deployment (CI/CD): Docker can be used in a CI/CD pipeline to automate
+the build, test, and deployment process. Developers can create a Docker image of their application,
 and then use that image to deploy the application to multiple environments automatically.
 
-4. Development environments: Docker can be used to create consistent development environments across 
-multiple machines. Developers can create a Docker image that includes all the tools and dependencies 
-they need to develop their applications, and then use that image to spin up development environments 
+4. Development environments: Docker can be used to create consistent development environments across
+multiple machines. Developers can create a Docker image that includes all the tools and dependencies
+they need to develop their applications, and then use that image to spin up development environments
 on any machine.
 
 5. Cloud computing: Docker is widely used in cloud computing environments such as AWS, Google Cloud Platform,
@@ -931,24 +930,24 @@ applications and infrastructure, and is widely used in modern software developme
 
 From now on, I'm assuming you're using Linux, Unix or something like that. No, not really. As you've read
 you should probably get the impression that I'm going to ask you to install another tool. But that's not
-your oridinary LAMP server on your bare metal Windows box. You can have [Docker](https://www.docker.com/) 
+your oridinary LAMP server on your bare metal Windows box. You can have [Docker](https://www.docker.com/)
 ([Podman](https://podman.io/) too) on your Windows too. All you need is that `git` for source version control
 and OCI containers...
 
 ### What is OCI container
 
-OCI (Open Container Initiative) container is a standard for container image format and runtime specification. 
-It is a set of open standards and specifications for creating, packaging, and running containerized 
+OCI (Open Container Initiative) container is a standard for container image format and runtime specification.
+It is a set of open standards and specifications for creating, packaging, and running containerized
 applications.
 
-The OCI was formed by a group of companies and organizations in the container ecosystem to create open 
-standards for container technology, and it is now a Linux Foundation project. The OCI container standard 
-defines a common specification for the format and runtime of container images, ensuring that they are 
+The OCI was formed by a group of companies and organizations in the container ecosystem to create open
+standards for container technology, and it is now a Linux Foundation project. The OCI container standard
+defines a common specification for the format and runtime of container images, ensuring that they are
 interoperable across different container runtimes.
 
-The OCI image format defines the structure and layout of container images, while the OCI runtime 
-specification defines how the container should be run and managed. The OCI standard provides an 
-interoperable, vendor-neutral container format that can be used by any container runtime, enabling 
+The OCI image format defines the structure and layout of container images, while the OCI runtime
+specification defines how the container should be run and managed. The OCI standard provides an
+interoperable, vendor-neutral container format that can be used by any container runtime, enabling
 developers to build and distribute containerized applications without worrying about the underlying
 infrastructure.
 
@@ -996,7 +995,7 @@ improved performance and usability compared to its predecessor, Yum.
 ### What is Linux
 
 Linux is an open-source operating system kernel created by Linus Torvalds in 1991, and is the basis
-for many popular Linux-based operating systems, commonly referred to as "Linux distributions". 
+for many popular Linux-based operating systems, commonly referred to as "Linux distributions".
 Linux is a Unix-like operating system, which means it shares many similarities with the original
 Unix operating system, such as a hierarchical file system, a command-line interface, and a focus
 on modular design and composability.
@@ -1054,11 +1053,11 @@ It keeps track of your changes to files, it is able to send data to git servers,
 
     - `git init`
     - you might have to set your username and email
-        * git config --global user.name "FIRST_NAME LAST_NAME"
-        * git config --global user.email "MY_NAME@example.com"
+        - git config --global user.name "FIRST_NAME LAST_NAME"
+        - git config --global user.email "MY_NAME@example.com"
 
 2. Stage your files for commit
-    
+
     - `git add path/to/your/file another/file .gitignore` or
     - `git add *` - this will add all files except those in `.gitignore` but not always all, so check with:
     - `git status`
@@ -1080,7 +1079,7 @@ It keeps track of your changes to files, it is able to send data to git servers,
     5.3. `git pull origin main --rebase`, this is usually the main or master branch,
         but you might want to use another local branch, and `--rebase` option let's you
         choose which changes you wish to preserve from upstream or local branch
-    
+
     - you might need to merge branches, so do `git checkout main` to change to main branch,
         and then, `git merge upstream`
 
@@ -1097,9 +1096,9 @@ Linux kernel, and has since become one of the most widely used version control s
 development industry.
 
 Git enables multiple developers to collaborate on the same project by allowing them to create their own
-local copies (or "clones") of the code repository. Each developer can then make changes to their local 
-copy and push those changes back to the central repository. Git uses a system of branching and merging 
-to manage changes, allowing developers to work on different features or bug fixes in isolation and 
+local copies (or "clones") of the code repository. Each developer can then make changes to their local
+copy and push those changes back to the central repository. Git uses a system of branching and merging
+to manage changes, allowing developers to work on different features or bug fixes in isolation and
 then merge their changes back into the main codebase when they are ready.
 
 Some of the key features of Git include:
@@ -1114,13 +1113,13 @@ history of all changes and revert to previous versions if necessary.
 - Collaboration: Git enables multiple developers to work on the same project concurrently, sharing their
 changes and resolving conflicts as needed.
 
-Overall, Git is a powerful tool that enables developers to work more efficiently and collaboratively, 
+Overall, Git is a powerful tool that enables developers to work more efficiently and collaboratively,
 while also providing a robust and reliable system for managing and tracking changes to code over time.
 
 ### When you're done
 
-After the initial setup of `Podman & git` you can spin up this simple container. It consist of `Fedora`, 
-GNU/Linux, `Development Tools` - our main focus here is `make` - for _Makefiles_ and `gcc` for __C__, 
+After the initial setup of `Podman & git` you can spin up this simple container. It consist of `Fedora`,
+GNU/Linux, `Development Tools` - our main focus here is `make` - for _Makefiles_ and `gcc` for __C__,
 and `Ruby` - dynamic programing language. Why another language? I want to show how to call C code from
 other programming languages, and it's much more easier, and sane, to create a website using Ruby than using C.
 We will also explore using JSON in C and in Ruby. We will create a KISS website containing data
@@ -1196,30 +1195,30 @@ entire lifetime of the program, and are platform-specific.
 
 ### Compile shared library
 
-To compile a shared library from a C file, you can use the "-shared" flag with the GCC 
+To compile a shared library from a C file, you can use the "-shared" flag with the GCC
 (GNU Compiler Collection) command. Here's an example of how to do this:
 
 1. Write your C code in a file named "my_library.c". For example:
 
-```c
-int add_numbers(int x, int y) {
-    return x + y;
-}
-```
+    ```c
+    int add_numbers(int x, int y) {
+        return x + y;
+    }
+    ```
 
 2. Compile the C code as a shared library using the GCC command with the "-shared" flag:
 
-```bash
-gcc -shared -o libmy_library.so my_library.c
-```
+    ```bash
+    gcc -shared -o libmy_library.so my_library.c
+    ```
 
 This will create a shared library file named "libmy_library.so" in the current directory.
 
-The "-shared" flag tells GCC to produce a shared library instead of an executable. The "-o" 
+The "-shared" flag tells GCC to produce a shared library instead of an executable. The "-o"
 flag specifies the output file name.
 
-Note that the file extension for shared libraries can vary depending on the platform. On Linux 
-and other Unix-like systems, the file extension is typically ".so". On macOS, the file extension 
+Note that the file extension for shared libraries can vary depending on the platform. On Linux
+and other Unix-like systems, the file extension is typically ".so". On macOS, the file extension
 is typically ".dylib". On Windows, the file extension is typically ".dll".
 
 Once you have compiled the shared library, you can link it with other programs that use the library.
@@ -1233,18 +1232,18 @@ the size of executables and reduce memory usage.
 
 1. Write your C code in a file named "my_library.c". For example:
 
-```c
-int add_numbers(int x, int y) {
-    return x + y;
-}
-```
+    ```c
+    int add_numbers(int x, int y) {
+        return x + y;
+    }
+    ```
 
 2. Compile the C code as a dynamic library using the GCC command with the "-fPIC" (position-independent code)
 and "-shared" flags:
 
-```bash
-gcc -fPIC -shared -o libmy_library.so my_library.c
-```
+    ```bash
+    gcc -fPIC -shared -o libmy_library.so my_library.c
+    ```
 
 This will create a dynamic library file named "libmy_library.so" in the current directory.
 
@@ -1256,10 +1255,10 @@ Note that the file extension for dynamic libraries can vary depending on the pla
 Unix-like systems, the file extension is typically ".so". On macOS, the file extension is typically ".dylib".
 On Windows, the file extension is typically ".dll".
 
-Once you have compiled the dynamic library, you can load it into a program using a dynamic linker, such as 
-the "dlopen" function in C or the equivalent functions in other programming languages. The dynamic linker 
-will load the library into memory at runtime and resolve any symbols that the program needs from the library. 
-This allows programs to share code and data with dynamic libraries, which can help reduce memory usage and 
+Once you have compiled the dynamic library, you can load it into a program using a dynamic linker, such as
+the "dlopen" function in C or the equivalent functions in other programming languages. The dynamic linker
+will load the library into memory at runtime and resolve any symbols that the program needs from the library.
+This allows programs to share code and data with dynamic libraries, which can help reduce memory usage and
 make it easier to update and maintain the shared code.
 
 ## Back to Dockerfile
@@ -1268,8 +1267,8 @@ This `Dockerfile` will eventually run our application so watch it closely as it 
 
 ### Minimal Dockerfile
 
-Now please get back to the Dockerfile we created and change so it look like the file below and run `docker build --tag c-dev .`. 
-This will create a c-dev image that you can run with `docker run --rm -it c-dev`. If it fails, you might need to run 
+Now please get back to the Dockerfile we created and change so it look like the file below and run `docker build --tag c-dev .`.
+This will create a c-dev image that you can run with `docker run --rm -it c-dev`. If it fails, you might need to run
 again `docker build --no-chache -t c-dev`
 
 ```Dockerfile
@@ -1282,6 +1281,7 @@ RUN dnf install -y ruby libcurl-devel json-c-devel && gem install bundler
 
 ENTRYPOINT [ "make", "test" ]
 ```
+
 Be aware that I have added `libcurl` and `json-c` _*-devel_ libraries that we will use
 
 This will inevitebly fail. But don't worry, we have just satisfied the red rule 💄. Now it's time to create a
@@ -1314,24 +1314,24 @@ DEBUG = debug
 
 # create curl library
 all: $(SRC)
-	$(CC) $(CFLAGS) $(CURLCFLAGS) $(JSONCFLAGS) -fPIC -shared $^ -o $(CURL) $(CURLFLAGS) $(JSONFLAGS)
+ $(CC) $(CFLAGS) $(CURLCFLAGS) $(JSONCFLAGS) -fPIC -shared $^ -o $(CURL) $(CURLFLAGS) $(JSONFLAGS)
 
 # create test executable in debug mode
 $(DEBUG): $(TEST).c $(UNITY_SRC)
-	$(CC) $(CFLAGS) -I../unity $(CURLCFLAGS) $(JSONCFLAGS) -g $^ -o $@ $(CURLFLAGS) $(JSONFLAGS)
+ $(CC) $(CFLAGS) -I../unity $(CURLCFLAGS) $(JSONCFLAGS) -g $^ -o $@ $(CURLFLAGS) $(JSONFLAGS)
 
 # run test executable
 $(TEST): $(TEST).c $(UNITY_SRC)
-	$(CC) $(CFLAGS) -I../unity $(CURLCFLAGS) $(JSONCFLAGS) $^ -o $@ $(CURLFLAGS) $(JSONFLAGS)
-	./$(TEST)
+ $(CC) $(CFLAGS) -I../unity $(CURLCFLAGS) $(JSONCFLAGS) $^ -o $@ $(CURLFLAGS) $(JSONFLAGS)
+ ./$(TEST)
 
 # clean up
 clean:
-	rm -f *.o
-	rm -f $(TEST)
-	rm -rf *.dSYM
-	rm -f $(DEBUG)
-	rm -f $(CURL)
+ rm -f *.o
+ rm -f $(TEST)
+ rm -rf *.dSYM
+ rm -f $(DEBUG)
+ rm -f $(CURL)
 ```
 
 This is a lot of code, but it is intended to help you in managing all the compilation and linking process
@@ -1459,7 +1459,7 @@ int main(void) {
 }
 ```
 
-Here I have included two sources of information we test against: IP number obtained from (**thank you**) `ifconfig.me`,
+Here I have included two sources of information we test against: IP number obtained from (__thank you__) `ifconfig.me`,
 and a second one, JSON object from Apple Music API. Both are free to use websites that provide machine readable
 messages that after some tuning can turn into human readable data. And as for every rule, there are exceptions.
 First of all. If you are sure that the message will never change, and you want to test the functionality of the
@@ -1468,7 +1468,7 @@ but I also know that there are many similar song titles in my discography, so I 
 query is the exact match. Then I will know that my code works as intended. Probably I should also check if the result
 of the search in Apple Music API is a proper JSON object, but that I leave to you for an excercise instead of another
 round with kata from Codewars. They are good to train, but you probably won't write that kind of code never in your lifetime
-as a proffesional Hacker, you would just copy and paste the result of a pleasent conversation with _ChatGPT_, or 
+as a proffesional Hacker, you would just copy and paste the result of a pleasent conversation with _ChatGPT_, or
 _Google_ search. To solve this puzzle, you can use `json-c` library that we have installed in Dockerfile. And yes,
 you can develop in container. If you want to jump right now into development in containers, you might check this
 article about [Visual Studio Code - devcontainers](https://code.visualstudio.com/docs/devcontainers/containers).
@@ -1638,7 +1638,7 @@ char *curl(char *url) {
 ```
 
 Here we go! We have here a complete source code for example usage of libcurl library in so called wrapper around it
-, the function takes a single argument url, which is a pointer to a character array or C-style string. The function 
+, the function takes a single argument url, which is a pointer to a character array or C-style string. The function
 itself returns a pointer to a character array or C-style string. It is based of an example from cURL library webpage
 with addition of SSL and JSON object check, cast and downcast. So now you should know how to solve the previous puzzle
 on how to check if a string is a valid JSON object. We set headers, to accept json response, but if the response is not
@@ -1694,7 +1694,7 @@ Here you go 🍀! Now we're in green state.
 
 ## RuboCop and ClangFormat, the police of the source code
 
-- [RuboCop](https://rubocop.org/) is a tool that beautifies your code written in Ruby. 
+- [RuboCop](https://rubocop.org/) is a tool that beautifies your code written in Ruby.
 - [ClangFormat](https://clang.llvm.org/docs/ClangFormat.html) is a tool that prettifies your C, C++, Java,
 Java Script, JSON, Objective-C, Protobuf and C# code.
 
@@ -1729,8 +1729,8 @@ We define here what will be installed when we run `bundle install` command. Let'
 give it `/bin/bash` as the `ENTRYPOINT`, this will let us fiddle with the system while being able to run make and
 in near future `bundle exec` commands. Do you know that you can connect to already running container? No? Well now you do.
 It's just a matter of `docker exec` command. I think, that the best workflow from now until we have ready web app would be
-to attach live folder into container. Comment out the `#RUN git clone`, `#COPY . /app`, subsequent `#RUN` and a line below 
-`# ` and rebuild the container - `docker build -t c-dev .` After this you can attach current folder and run the container
+to attach live folder into container. Comment out the `#RUN git clone`, `#COPY . /app`, subsequent `#RUN` and a line below
+`#` and rebuild the container - `docker build -t c-dev .` After this you can attach current folder and run the container
 with command like this (mind that we're publishing port 9292 from container to port 9292 on the host machine, what is
 reflected in the command in the opposite order):
 
@@ -1759,8 +1759,8 @@ In the order of appearence:
 - [Sinatra](https://sinatrarb.com/) - Sinatra is a DSL for quickly creating web applications in Ruby with minimal effort. If you
 search for Sinatra on RubyGems you might notice, that there is plenty of gems that help Sinatra to be Sinatra. We will explore
 this multitude of choices.
-- [Puma](https://puma.io/) - Puma is a simple, fast, threaded, and highly parallel HTTP 1.1 server for Ruby/Rack applications. 
-Puma is intended for use in both development and production environments. It's great for highly parallel Ruby implementations 
+- [Puma](https://puma.io/) - Puma is a simple, fast, threaded, and highly parallel HTTP 1.1 server for Ruby/Rack applications.
+Puma is intended for use in both development and production environments. It's great for highly parallel Ruby implementations
 such as Rubinius and JRuby as well as as providing process worker support to support CRuby well.
 - [Rack](https://github.com/rack/rack) - Rack provides a minimal, modular and adaptable interface for developing web applications
 in Ruby. By wrapping HTTP requests and responses in the simplest way possible, it unifies and distills the API for web servers,
@@ -1770,7 +1770,7 @@ web frameworks, and software in between (the so-called middleware) into a single
 - [rack-test](https://github.com/rack/rack-test) - Rack::Test is a small, simple testing API for Rack apps. It can be used
 on its own or as a reusable starting point for Web frameworks and testing libraries to build on.
 - [rspec](https://github.com/rspec) - BDD for Ruby
-- [rerun](https://github.com/alexch/rerun/) - Restarts your app when a file changes. A no-frills, command-line alternative 
+- [rerun](https://github.com/alexch/rerun/) - Restarts your app when a file changes. A no-frills, command-line alternative
 to Guard, Shotgun, Autotest, etc.
 
 This are the dependencies for my web frontend to, let's be true, simple data. Maybe that's an overkill, but you will
@@ -1805,7 +1805,7 @@ ENTRYPOINT [ "/bin/bash" ]
 ```
 
 Please start the container with `docker run -it --name app -v $(pwd):/app -p 9292 c-dev` command, and run `bundle install`
-inside it. You will see how gems are consecutively installed, wait until command ends. After adding new gem to Gemfile 
+inside it. You will see how gems are consecutively installed, wait until command ends. After adding new gem to Gemfile
 you would have to run `bundle install` again, but for now we're done here.
 
 ### Configuration
@@ -1831,7 +1831,7 @@ and...
 
 In this file:
 
-```
+```ruby
 # frozen_string_literal: true
 
 require 'rubygems'
@@ -1846,10 +1846,9 @@ require './app/server'
 In summary this files enables `rackup` support for `Sinatra` app, that will run in container. It's just setup files...
 If you want to be more picky, dig up the documentation on Rack and it's support for Sinatra, but for now, I leave it
 here as is. I hoope you will handle me and read this book as we go along, so we can create more sophisticated user interfaces
-and more complicated libraries for, especially, my use case **api hacking**. I want to do this in future, but for now,
+and more complicated libraries for, especially, my use case __api hacking__. I want to do this in future, but for now,
 I have to refresh and broaden my basics knowledge, and writing this book helps me in the learning process and it should do
 good job at giving you a primer on programming and development process.
-
 
 ### Rspec
 
@@ -2034,12 +2033,12 @@ end
 
 This are just simple tests, and they shouldn't really be here because we already tested the `curl` library, thus we
 shouldn't repeat ourselfs, but instead test our implementation that extend apps, not apps already written (library, or libraries
-in fact). I put this here for learning purposes, and learning by doing and sometimes repeating and doing things twice, 
+in fact). I put this here for learning purposes, and learning by doing and sometimes repeating and doing things twice,
 and the hard way. I wanted to show you that writing tests in `Ruby` can be really expressive and simple task. I think, that you
 already see that coding does not have to be done the hard way, it's just learning that you have to do before (that's why we
 learn C) is sometimes hard to grasp.
 
-In Ruby we will be writing web application that will run in container on our machine, but you can simply install all the 
+In Ruby we will be writing web application that will run in container on our machine, but you can simply install all the
 dependencies using bundler and with only `ruby` and maybe `ruby-devel` package you can run the whole app. For now we will stick
 to Dockerfile, which is easier to manage - at least for me.
 
@@ -2346,22 +2345,22 @@ jobs:
 
 ## Stack and heap
 
-In computer programming, the terms "stack" and "heap" refer to two different areas of memory that are used to store data 
+In computer programming, the terms "stack" and "heap" refer to two different areas of memory that are used to store data
 during the execution of a program.
 
-The stack is a region of memory that is used to store function calls and local variables. Each time a function is called, 
+The stack is a region of memory that is used to store function calls and local variables. Each time a function is called,
 a new frame is created on the stack, which contains the function's arguments, local variables, and return address. When the
-function returns, its frame is removed from the stack, and the program resumes execution at the return address that was 
-stored in the calling function's frame. The stack is a LIFO (last-in, first-out) data structure, meaning that the most 
+function returns, its frame is removed from the stack, and the program resumes execution at the return address that was
+stored in the calling function's frame. The stack is a LIFO (last-in, first-out) data structure, meaning that the most
 recently added item is the first one to be removed.
 
-The heap, on the other hand, is a region of memory that is used for dynamic memory allocation. When a program needs to 
-allocate memory at runtime, it requests a block of memory from the heap using functions like malloc() or new(). The memory 
-block that is allocated can be of any size and can be accessed randomly. Unlike the stack, the heap is not automatically 
-managed by the program's execution flow, so it's up to the programmer to manage the memory allocations and deallocations 
+The heap, on the other hand, is a region of memory that is used for dynamic memory allocation. When a program needs to
+allocate memory at runtime, it requests a block of memory from the heap using functions like malloc() or new(). The memory
+block that is allocated can be of any size and can be accessed randomly. Unlike the stack, the heap is not automatically
+managed by the program's execution flow, so it's up to the programmer to manage the memory allocations and deallocations
 properly to prevent memory leaks or other issues.
 
-In summary, the stack is a fixed-size region of memory that is used for function calls and local variables, while the heap 
+In summary, the stack is a fixed-size region of memory that is used for function calls and local variables, while the heap
 is a dynamic region of memory that is used for dynamic memory allocation.
 
 Stack example:
@@ -2384,8 +2383,8 @@ int main() {
 }
 ```
 
-In this example, we define a function factorial that calculates the factorial of a given number recursively. When we call 
-this function from main, a new frame is created on the stack to store the function arguments and local variables. When the 
+In this example, we define a function factorial that calculates the factorial of a given number recursively. When we call
+this function from main, a new frame is created on the stack to store the function arguments and local variables. When the
 function returns, its frame is removed from the stack, and the program resumes execution from where it left off.
 
 Heap example:
@@ -2422,34 +2421,34 @@ int main() {
 }
 ```
 
-In this example, we use the malloc function to allocate a block of memory on the heap that can hold n integers. 
-We then initialize the memory block with some values and print them out. Finally, we use the free function to 
-release the memory block back to the operating system. It's important to note that we must always free the memory 
+In this example, we use the malloc function to allocate a block of memory on the heap that can hold n integers.
+We then initialize the memory block with some values and print them out. Finally, we use the free function to
+release the memory block back to the operating system. It's important to note that we must always free the memory
 block when we're done using it to prevent memory leaks.
 
 ### Stack overflow
 
-Stack overflow occurs when the amount of memory allocated for the stack is exceeded. This can happen when a program 
+Stack overflow occurs when the amount of memory allocated for the stack is exceeded. This can happen when a program
 has too many nested function calls or when a function allocates too much memory on the stack for local variables.
 
 Here are some ways to prevent stack overflow in C language:
 
-1. Reduce the number of nested function calls: One way to prevent stack overflow is to reduce the number of nested 
-function calls in your program. This can be achieved by breaking down larger functions into smaller ones, or by using 
+1. Reduce the number of nested function calls: One way to prevent stack overflow is to reduce the number of nested
+function calls in your program. This can be achieved by breaking down larger functions into smaller ones, or by using
 loops instead of recursion.
 
-2.Limit the size of local variables: If you're allocating large arrays or structures on the stack, you may run out of 
+2. Limit the size of local variables: If you're allocating large arrays or structures on the stack, you may run out of
 space quickly. To prevent this, you can allocate these variables on the heap instead using functions like malloc or calloc.
 
-3. Increase the stack size: Some compilers allow you to increase the amount of memory allocated for the stack. In GCC, 
+3. Increase the stack size: Some compilers allow you to increase the amount of memory allocated for the stack. In GCC,
 for example, you can use the -Wl,--stack,SIZE linker option to set the stack size to SIZE bytes.
 
-4. Use tail recursion: If you're using recursion, you can use tail recursion to reduce the amount of memory used on the 
-stack. Tail recursion is a technique where the recursive call is the last statement in the function, so the compiler 
+4. Use tail recursion: If you're using recursion, you can use tail recursion to reduce the amount of memory used on the
+stack. Tail recursion is a technique where the recursive call is the last statement in the function, so the compiler
 can optimize it into a loop.
 
-5. Avoid infinite recursion: Infinite recursion occurs when a function calls itself recursively without a base case. 
-This can quickly exhaust the stack space and cause a stack overflow. To prevent this, make sure your recursive functions 
+5. Avoid infinite recursion: Infinite recursion occurs when a function calls itself recursively without a base case.
+This can quickly exhaust the stack space and cause a stack overflow. To prevent this, make sure your recursive functions
 have a base case that terminates the recursion.
 
 By following these tips, you can prevent stack overflow and ensure that your program runs smoothly.
@@ -2458,71 +2457,69 @@ By following these tips, you can prevent stack overflow and ensure that your pro
 
 In C language, the main difference between the stack and the heap is how memory is allocated and managed.
 
-1. Memory allocation: The stack is a static memory allocation method where the memory is allocated at compile-time. 
+1. Memory allocation: The stack is a static memory allocation method where the memory is allocated at compile-time.
 On the other hand, the heap is a dynamic memory allocation method where the memory is allocated at run-time.
 
-2. Memory management: The stack is managed automatically by the system, and memory is allocated and deallocated 
-in a last-in, first-out (LIFO) manner. This means that memory is automatically deallocated when a function returns 
+2. Memory management: The stack is managed automatically by the system, and memory is allocated and deallocated
+in a last-in, first-out (LIFO) manner. This means that memory is automatically deallocated when a function returns
 or a variable goes out of scope. In contrast, memory on the heap is allocated and deallocated manually by the programmer,
 using functions like malloc, calloc, realloc, and free.
 
-3. Memory size: The stack is typically smaller than the heap. The size of the stack is determined at compile-time and is 
-limited by the amount of available memory. The size of the heap, on the other hand, can grow or shrink dynamically at 
+3. Memory size: The stack is typically smaller than the heap. The size of the stack is determined at compile-time and is
+limited by the amount of available memory. The size of the heap, on the other hand, can grow or shrink dynamically at
 run-time as needed.
 
-4. Data access: Accessing data on the stack is faster than accessing data on the heap because the stack uses a LIFO 
-memory allocation method, and data is stored in contiguous blocks. In contrast, accessing data on the heap requires 
+4. Data access: Accessing data on the stack is faster than accessing data on the heap because the stack uses a LIFO
+memory allocation method, and data is stored in contiguous blocks. In contrast, accessing data on the heap requires
 the use of pointers, which can be slower.
 
-In summary, the stack and the heap are two different memory allocation methods in C language. The stack is a static 
-memory allocation method managed automatically by the system, while the heap is a dynamic memory allocation method 
-managed manually by the programmer. The size of the stack is limited and determined at compile-time, while the size 
+In summary, the stack and the heap are two different memory allocation methods in C language. The stack is a static
+memory allocation method managed automatically by the system, while the heap is a dynamic memory allocation method
+managed manually by the programmer. The size of the stack is limited and determined at compile-time, while the size
 of the heap can grow or shrink dynamically at run-time. Accessing data on the stack is faster than accessing data on the heap.
 
 ### Segmentation fault
 
 A segmentation fault (often referred to as a "segfault") is a type of error that occurs when a program tries to access
-memory that it is not allowed to access. In C, this often happens when a program tries to access memory that has not been 
+memory that it is not allowed to access. In C, this often happens when a program tries to access memory that has not been
 allocated or has already been freed. Here are a few examples of code that can cause a segmentation fault:
 
 1. Accessing an array out of bounds:
 
-```c
-int arr[5];
-arr[6] = 42; // Accessing the 7th element of the array (which doesn't exist)
-```
+    ```c
+    int arr[5];
+    arr[6] = 42; // Accessing the 7th element of the array (which doesn't exist)
+    ```
 
-In this example, the program tries to access the 7th element of the arr array, which is outside the bounds of the array 
-(since the array only has 5 elements). This can cause a segmentation fault because the program is trying to access memory 
-that has not been allocated for the array.
+    In this example, the program tries to access the 7th element of the arr array, which is outside the bounds of the array
+    (since the array only has 5 elements). This can cause a segmentation fault because the program is trying to access memory
+    that has not been allocated for the array.
 
 2. Dereferencing a null pointer:
 
-```c
-int* ptr = NULL;
-*ptr = 42; // Dereferencing a null pointer
-```
+    ```c
+    int* ptr = NULL;
+    *ptr = 42; // Dereferencing a null pointer
+    ```
 
-In this example, the program creates a null pointer ptr, and then tries to dereference it (i.e., access the memory it points to)
-and store a value in it. This can cause a segmentation fault because the program is trying to access memory that has not been 
-allocated for the pointer.
-
-```c
+    In this example, the program creates a null pointer ptr, and then tries to dereference it (i.e., access the memory it points to)
+    and store a value in it. This can cause a segmentation fault because the program is trying to access memory that has not been
+    allocated for the pointer.
 
 3. Double-freeing memory:
 
-```c
-int* ptr = malloc(sizeof(int));
-free(ptr);
-free(ptr); // Freeing the same memory twice
-```
+    ```c
+    int* ptr = malloc(sizeof(int));
+    free(ptr);
+    free(ptr); // Freeing the same memory twice
+    ```
 
-In this example, the program allocates memory for an integer using malloc, and then frees it using free. However, 
-the program then tries to free the same memory again, which can cause a segmentation fault because the memory has 
-already been freed.
+    In this example, the program allocates memory for an integer using malloc, and then frees it using free. However,
+    the program then tries to free the same memory again, which can cause a segmentation fault because the memory has
+    already been freed.
 
-These are just a few examples of situations that can cause a segmentation fault in C. In general, segmentation faults 
-occur when a program tries to access memory that it is not allowed to access, so it's important to be careful when 
+These are just a few examples of situations that can cause a segmentation fault in C. In general, segmentation faults
+occur when a program tries to access memory that it is not allowed to access, so it's important to be careful when
 working with pointers and memory allocation in C.
 
 Here's an example of how returning from a function can cause a segmentation fault in C:
@@ -2542,14 +2539,14 @@ int main() {
 }
 ```
 
-In this example, the create_array function creates an integer array arr of size size, initializes it with values, 
-and then returns a pointer to the array. However, the array arr is allocated on the stack within the function, 
+In this example, the create_array function creates an integer array arr of size size, initializes it with values,
+and then returns a pointer to the array. However, the array arr is allocated on the stack within the function,
 which means that it is deallocated when the function returns.
 
-When the main function calls create_array and assigns the returned pointer to ptr, ptr points to memory that has 
+When the main function calls create_array and assigns the returned pointer to ptr, ptr points to memory that has
 already been deallocated, and accessing this memory can cause a segmentation fault.
 
-To avoid this error, we could allocate the memory for the array on the heap using malloc, which would ensure that 
+To avoid this error, we could allocate the memory for the array on the heap using malloc, which would ensure that
 the memory remains valid after the function returns:
 
 ```c
@@ -2568,15 +2565,15 @@ int main() {
 }
 ```
 
-In this version of the code, the create_array function allocates memory on the heap using malloc, initializes it 
-with values, and returns a pointer to the allocated memory. The main function can safely access the memory pointed 
+In this version of the code, the create_array function allocates memory on the heap using malloc, initializes it
+with values, and returns a pointer to the allocated memory. The main function can safely access the memory pointed
 to by ptr because it was allocated on the heap using malloc and will remain valid even after the function returns.
 
 ## Pointers to functions
 
-In C, it is possible to declare pointers to functions, which are similar to pointers to data. A pointer to a 
-function stores the memory address of a function, allowing you to call the function indirectly through the pointer. 
-This can be useful in many situations, such as when you want to pass a function as an argument to another function, 
+In C, it is possible to declare pointers to functions, which are similar to pointers to data. A pointer to a
+function stores the memory address of a function, allowing you to call the function indirectly through the pointer.
+This can be useful in many situations, such as when you want to pass a function as an argument to another function,
 or when you want to choose which function to call at runtime based on some condition.
 
 Here's an example of how to declare and use a pointer to a function in C:
@@ -2602,13 +2599,13 @@ int main() {
 }
 ```
 
-In this example, we declare a pointer p to a function that takes two integers as arguments and returns an integer. 
-We then set the pointer to point to the add function using the assignment p = add, and call the function indirectly 
-through the pointer using p(2, 3). We then set the pointer to point to the subtract function using p = subtract, 
+In this example, we declare a pointer p to a function that takes two integers as arguments and returns an integer.
+We then set the pointer to point to the add function using the assignment p = add, and call the function indirectly
+through the pointer using p(2, 3). We then set the pointer to point to the subtract function using p = subtract,
 and call the function indirectly through the pointer using p(5, 3).
 
-Note that the syntax for declaring a pointer to a function includes parentheses around the pointer name and the argument 
-types, as well as an asterisk to indicate that it is a pointer. In the example above, we declare the pointer as 
+Note that the syntax for declaring a pointer to a function includes parentheses around the pointer name and the argument
+types, as well as an asterisk to indicate that it is a pointer. In the example above, we declare the pointer as
 int (*p)(int, int) to indicate that it is a pointer to a function that takes two int arguments and returns an int.
 
 Use `typedef before pointer function declaration. Then you can pass it as a parameter to function (callback), use
@@ -2616,7 +2613,7 @@ it in one function definition and then when invoking function pass other functio
 
 ## Bad practice in C
 
-There are many bad practices in C code that can lead to bugs, security vulnerabilities, or poor performance. 
+There are many bad practices in C code that can lead to bugs, security vulnerabilities, or poor performance.
 Here are some examples:
 
 1. Not checking return values: C functions often return error codes or null pointers to indicate errors or failure.
@@ -2625,7 +2622,7 @@ Failing to check these return values can lead to undefined behavior or other pro
 2. Using uninitialized variables: Using uninitialized variables can lead to unpredictable behavior, as the value of an
 uninitialized variable is undefined.
 
-3. Ignoring compiler warnings: Compiler warnings indicate potential problems in your code that you should fix. Ignoring 
+3. Ignoring compiler warnings: Compiler warnings indicate potential problems in your code that you should fix. Ignoring
 these warnings can lead to bugs or other issues in your program.
 
 4. Using magic numbers: Magic numbers are hard-coded constants that appear in your code without explanation. Using magic
@@ -2648,18 +2645,18 @@ best practices and avoid common pitfalls.
 
 Here are some best practices for writing C code:
 
-- Use descriptive variable names: Choosing descriptive names for your variables can make your code easier to 
+- Use descriptive variable names: Choosing descriptive names for your variables can make your code easier to
 understand and maintain.
 
-- Use comments to explain your code: Adding comments to your code can help others understand what your code does 
+- Use comments to explain your code: Adding comments to your code can help others understand what your code does
 and why.
 
 - Always initialize your variables: Initializing your variables to a known value can help avoid bugs and undefined behavior.
 
-- Check return values and handle errors: C functions often return error codes or null pointers to indicate errors or 
+- Check return values and handle errors: C functions often return error codes or null pointers to indicate errors or
 failure. Always check these return values and handle errors appropriately.
 
-- Use const and static where appropriate: Using the const keyword can help prevent accidental modifications to your 
+- Use const and static where appropriate: Using the const keyword can help prevent accidental modifications to your
 variables, while using the static keyword can limit the scope of your variables and functions.
 
 - Use braces around conditional statements: Adding braces around your conditional statements can help prevent bugs and
@@ -2671,7 +2668,7 @@ passing values as function arguments or using local variables.
 - Use preprocessor macros sparingly: Preprocessor macros can be useful for defining constants or avoiding code duplication,
 but they can also make your code harder to read and maintain.
 
-- Follow a consistent coding style: Using a consistent coding style can make your code easier to read and understand. 
+- Follow a consistent coding style: Using a consistent coding style can make your code easier to read and understand.
 Consider using a popular coding style guide, such as the Google C++ Style Guide or the GNU Coding Standards.
 
 - Test your code thoroughly: Testing your code can help catch bugs and ensure that your code works as expected. Consider
