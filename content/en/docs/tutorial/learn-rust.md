@@ -22,4 +22,4 @@ toc: true
 - Do you want to learn a new language?
 - Do you want to know what AI is capable of?
 
-Go to [learn-rust](https://learn-rust.nutek.net) and start __yours__ _Tour de Rust_ now!
+Go to [learn-rust](https://learn-rust.neosb.net) and start __yours__ _Tour de Rust_ now!
