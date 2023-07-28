@@ -10,7 +10,7 @@ description = "Nutek Security Platform is a system for building secure apps and 
 # docsVersion = "0.3"
 
 ## Open Graph
-images = ["doks.png"]
+images = ["nutek-terminal.png"]
 ogLocale = "en_US"
 domainTLD = "nutek.neosb.net"
 titleHome = "Nutek Security Solutions"
