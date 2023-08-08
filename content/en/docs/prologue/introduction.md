@@ -15,7 +15,7 @@ toc: true
 
 ## Get started
 
-Clone, copy or download zipped [Github repository](https://github.com/nutek-terminal/nutek-apple) and run `nutek-apple.rb` with `Ruby` or set executable permission and start right it away. The built in help will guide you.
+Clone [Github repository](https://github.com/nutek-terminal/nutek-apple) and run `nutek-apple.rb` with `Ruby` or set executable permission and start right it away. The built in help will guide you.
 
 ### Quick Start
 
@@ -55,94 +55,6 @@ See what others have build with Doks. [Showcase →](https://getdoks.org/showcas
 If you want to contribute to any of the __Nutek Security Solutions__ projects
 head on to __GitHub__ and look for your choice in _nutek-terminal_
 organization, [Contributing →](https://github.com/nutek-terminal), or if
-you wish to extend this page, head over to [this repository](https://github.com/phoenix-journey/phoenix-journey.github.io).
+you wish to extend this page, head over to [this repository](https://github.com/nutek-terminal/nutek-terminal.github.io).
 
 Also, if you're interested in obtaining source code for projects not listed on Github page, do not hesitate to [contact me]({{< relref "contact" >}})
-
-## Help
-
-## List of tools divided by category
-
-* Attack:
-  * bettercap
-  * ettercap
-  * hashcat
-  * hydra
-  * john-jumbo
-  * metasploit
-  * mitmproxy
-  * ncrack
-  * socat
-  * sqlmap
-  * xh
-* Code:
-  * adns
-  * bvi
-  * capstone
-  * cflow
-  * cppcheck
-  * fmt
-  * gitleaks
-  * grpc
-  * hyperscan
-  * jansson
-  * radare2
-  * rats
-  * zzuf
-* Knowledge:
-  * amass
-  * arp-scan
-  * bmon
-  * dnsx
-  * feroxbuster
-  * ffuf
-  * fping
-  * gau
-  * gobuster
-  * httpx
-  * httrack
-  * masscan
-  * mtr
-  * nethogs
-  * ngrep
-  * nikto
-  * nmap
-  * nuclei
-  * p0f
-  * rustscan
-  * smap
-  * tcpdump
-  * tcpflow
-  * termshark
-  * testssl
-  * zmap
-* Utility:
-  * argon2
-  * bat
-  * bottom
-  * discount
-  * dos2unix
-  * dust
-  * exa
-  * expect
-  * hexyl
-  * htmlq
-  * ipcalc
-  * irssi
-  * jq
-  * jql
-  * macchina
-  * mdcat
-  * monolith
-  * neovim
-  * openvpn
-  * ouch
-  * pandoc
-  * podman
-  * podman-compose
-  * ripgrep-all
-  * sd
-  * tmux
-  * viu
-  * w3m
-  * whatmask

@@ -25,14 +25,13 @@ Download size might be significant. Please be aware that on metered connections 
 
 You're really close to having the best there is in a fraction of a cent (don't forget to support the developers!)
 
-Get your copy of `nutek-apple.rb`, in a way that suits you the most.
+Get your copy of `nutek-apple.rb`, in a way that suits me the most.
 
-You can:
+Clone the repository:
 
-* copy the content and paste it in your text editor
-* download just this file
-* zip and download the repository
-* clone the whole project (you will get updates on `git pull origin main` command)
+```shell
+git clone https://github.com/nutek-terminal/nutek-terminal.github.io.git
+```
 
 {{< alert icon="👉" text="Cloning easily enables you to update `nutek-apple.rb` when the new version will come out." />}}
 
@@ -78,3 +77,9 @@ explenation.
 {{< details "Can't see?" >}}
 Simply click the TOOLS to the left, and the apps will roll...
 {{< /details >}}
+
+## Last but not least
+
+New version of `nutek-apple` now has _mini_ list of programs that you can
+install on your macOS. Simply provide the `--mini` flag and you will
+get the most important tools that you can use to get the job done.
