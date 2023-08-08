@@ -366,4 +366,4 @@ You might want to create `CNAME` with `www.your-domain.com`
 ### Inspiration
 
 For inspiration, take a look at Phoenix Journey's repository for
-[this website](https://github.com/phoenix-journey/phoenix-journey.github.io) written using the same tools, that's been thaught here.
+[this website](https://github.com/nutek-terminal/nutek-terminal.github.io) written using the same tools, that's been thaught here.
