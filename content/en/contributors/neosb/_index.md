@@ -9,4 +9,4 @@ images: []
 
 Nutek's friend.
 
-[@museyoucoulduse](https://twitter.com/museyoucoulduse)
+[@mathsecondname](https://twitter.com/mathsecondname)

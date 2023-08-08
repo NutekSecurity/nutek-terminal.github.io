@@ -3,8 +3,8 @@
 ## Homepage
 title = "Nutek Security Solutions"
 titleSeparator = "-"
-titleAddition = "Meet with flexibility of command line and gain true power, insight and save more time"
-description = "Nutek Security Platform is a system for building secure apps and assessing security of already working apps. Cybersecurity first class!"
+titleAddition = "Your freedom is our priority"
+description = "Nutek Security Platform is a system for building secure apps and assessing security of already working apps and systems. Cybersecurity first class! Information is the key."
 
 ## Documentation
 # docsVersion = "0.3"
@@ -16,15 +16,15 @@ domainTLD = "nutek.neosb.net"
 titleHome = "Nutek Security Solutions"
 
 ## Twitter Cards
-twitterSite = "@museyoucoulduse"
-twitterCreator = "@museyoucoulduse"
+twitterSite = "@mathsecondname"
+twitterCreator = "@mathsecondname"
 
 ## JSON-LD
 # schemaType = "Person"
 schemaType = "Organization"
 schemaName = "Nutek"
 schemaAuthor = "Szymon Błaszczyński"
-schemaAuthorTwitter = "https://twitter.com/museyoucoulduse"
+schemaAuthorTwitter = "https://twitter.com/mathsecondname"
 # schemaAuthorLinkedIn = "https://www.linkedin.com/in/henkverlinde/"
 schemaAuthorGitHub = "https://github.com/buahaha"
 schemaLocale = "en-US"
@@ -34,7 +34,7 @@ schemaLogoHeight = 512
 schemaImage = "nutek.png"
 schemaImageWidth = 1280
 schemaImageHeight = 640
-schemaTwitter = "https://twitter.com/museyoucoulduse"
+schemaTwitter = "https://twitter.com/mathsecondname"
 schemaLinkedIn = ""
 schemaGitHub = "https://github.com/nutek-terminal/"
 schemaSection = "blog"

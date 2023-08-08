@@ -11,8 +11,8 @@ images: []
 
 Contact:
 
-* {{< email user="museyoucoulduse" domain="gmail.com" >}}
-* [@museyoucoulduse](https://twitter.com/museyoucoulduse)
+* {{< email user="mathsecondname" domain="gmail.com" >}}
+* [@mathsecondname](https://twitter.com/mathsecondname)
 * [Discord](https://discord.gg/eXK56QPgTe)
 
 Github:

@@ -24,6 +24,8 @@ Szymon Bronisław Błaszczyński © 2023 [museyoucoulduse@gmail.com](mailto:muse
 
 <font size="1">Powered by [https://cj.rs/riss](https://cj.rs/riss)</font>
 
+<iframe src="https://github.com/sponsors/nutek-terminal/card" title="Sponsor nutek-terminal" height="225" width="600" style="border: 0;"></iframe>
+
 ___
 
 ## first-one
