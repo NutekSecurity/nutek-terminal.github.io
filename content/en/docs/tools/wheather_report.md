@@ -65,4 +65,22 @@ Display daily chart of AAPL stock for 1 day with few months of data.
 python3 wheater_report.py --yahoo AAPL
 ```
 
+## What's displayed on the chart?
+
+Chart #1
+
+- Ichimoku Cloud
+- CCI
+- Volume
+- Price line chart
+
+Chart #2
+
+- RSI
+- MACD
+- Volume
+- Price line chart
+
+## Link to the repository
+
 Get more information about Wheather Report on [GitHub](https://github.com/nutek-terminal/wheather_report)
