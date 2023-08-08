@@ -16,6 +16,8 @@ toc: true
 
  and explore 🌍
 
+<img src="https://img.shields.io/crates/v/bing-search.svg" alt="Crates.io">
+
 Using `bing-search` you can find information that you want. Although
 limited to displaying only headers, just like on the graphical interface
 during initial look up, it might help you tackle your problems better.
